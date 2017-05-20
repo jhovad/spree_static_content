@@ -16,9 +16,9 @@ class Spree::Page < ActiveRecord::Base
 
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
   
-  include SpreeGlobalize::Translatable
-
   translates :title, :body, :slug, :layout, :foreign_link, :meta_keywords, :meta_title, :meta_description, fallbacks_for_empty_translations: true
+  
+  include SpreeGlobalize::Translatable
   
   #extend FriendlyId
   #friendly_id :slug, :use => :globalize
