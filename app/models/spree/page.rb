@@ -20,8 +20,8 @@ class Spree::Page < ActiveRecord::Base
   
   include SpreeGlobalize::Translatable
   
-  extend FriendlyId
-  friendly_id :spree_page_id, :use => :globalize
+  #extend FriendlyId
+  #friendly_id :slug, :use => :globalize
 
   before_save :update_positions_and_slug
 
