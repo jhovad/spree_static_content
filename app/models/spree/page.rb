@@ -15,10 +15,10 @@ class Spree::Page < ActiveRecord::Base
   scope :sidebar_links, -> { where(show_in_sidebar: true).visible }
 
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
-
-  translates :title, :body, :slug, :layout, :foreign_link, :meta_keywords, :meta_title, :meta_description, fallbacks_for_empty_translations: true
   
   include SpreeGlobalize::Translatable
+
+  translates :title, :body, :slug, :layout, :foreign_link, :meta_keywords, :meta_title, :meta_description, fallbacks_for_empty_translations: true
   
   #extend FriendlyId
   #friendly_id :slug, :use => :globalize
