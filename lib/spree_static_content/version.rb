@@ -9,9 +9,9 @@ module SpreeStaticContent
 
   module VERSION
     MAJOR = 3
-    MINOR = 0
+    MINOR = 3
     TINY  = 0
-    PRE   = 'beta'
+    PRE   = 'alpha'
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
