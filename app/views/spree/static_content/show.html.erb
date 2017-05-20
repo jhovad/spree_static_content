@@ -1,6 +1,6 @@
-<% if @page.layout.present? and @page.render_layout_as_partial? %>
-  <%= render partial: @page.layout %>
-<% else %>
+<%# if @page.layout.present? and @page.render_layout_as_partial? %>
+  <%#= render partial: @page.layout %>
+<%# else %>
   <% content_for :head do -%>
     <%- if @page.meta_title.present? -%>
       <meta name="title" content="<%= @page.meta_title %>">
@@ -23,4 +23,4 @@
   <div id="page_content">
     <%= raw @page.body %>
   </div>
-<% end %>
+<%# end %>
