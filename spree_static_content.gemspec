@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 3.3.0.alpha'
-  s.add_runtime_dependency 'friendly_id-globalize'
 
   s.add_development_dependency 'capybara', '~> 2.4.4'
   s.add_development_dependency 'factory_girl', '~> 4.4'

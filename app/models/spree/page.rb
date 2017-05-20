@@ -18,10 +18,10 @@ class Spree::Page < ActiveRecord::Base
 
   translates :title, :body, :slug, :layout, :foreign_link, :meta_keywords, :meta_title, :meta_description, fallbacks_for_empty_translations: true
   
-  include SpreeGlobalize::Translatable
+  include SpreeGlobalize
   
-  extend FriendlyId
-  friendly_id :slug, :use => :globalize
+  #extend FriendlyId
+  #friendly_id :slug, :use => :globalize
 
   before_save :update_positions_and_slug
 
