@@ -6,13 +6,13 @@ module Spree
     layout :determine_layout
 
     def show
-      @page = Spree::Page.visible.where(slug: request.path)
+      @page = Spree::Page.visible.where(slug: request.path).first
     end
 
     private
 
     def determine_layout
-      #return @page.layout if @page && @page.layout.present? && !@page.render_layout_as_partial?
+      return @page.layout if @page && @page.layout.present? && !@page.render_layout_as_partial?
       Spree::Config.layout
     end
 
